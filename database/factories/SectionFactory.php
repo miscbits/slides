@@ -2,11 +2,11 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Model;
+use App\Section;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Section::class, function (Faker $faker) {
     return [
         'name' => Str::random(10),
     ];

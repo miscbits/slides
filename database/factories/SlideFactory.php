@@ -2,11 +2,11 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Model;
+use App\Slide;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Slide::class, function (Faker $faker) {
     return [
         'title' => $faker->word . ' ' . $faker->word . ' ' . $faker->word,
         'content' => $faker->paragraphs(),
