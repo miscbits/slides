@@ -6,7 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class VisitorCanViewSlides extends TestCase
+class SlidesTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -15,7 +15,7 @@ class VisitorCanViewSlides extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testUserCanSeeSlidesOnHomePage()
     {
         $response = $this->get('/');
 

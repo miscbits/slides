@@ -13,18 +13,18 @@ class CreateSlidesTable extends Migration
      */
     public function up()
     {
-        Schema::create('slides', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('sections', function (Blueprint $table) {
+            $table->bigIncrements('id', true);
             $table->string('name');
             $table->timestamps();
         });
 
         Schema::create('slides', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id', true);
             $table->string('title');
             $table->text('content');
             $table->string('slug')->unique();
-            $table->unsignedInteger('section_id');
+            $table->unsignedBigInteger('section_id');
             $table->timestamps();
 
             $table->foreign('section_id')
